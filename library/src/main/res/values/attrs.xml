@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MenuView">
+        <attr name="menu_name" format="string" />
+        <attr name="menu_nameColor" format="color" />
+        <attr name="menu_nameSize" format="float" />
+        <attr name="menu_hint" format="string" />
+        <attr name="menu_hintColor" format="color" />
+        <attr name="menu_hintSize" format="float" />
+        <attr name="menu_icon" format="color|reference" />
+        <attr name="menu_isShowArrow" format="boolean" />
+        <attr name="menu_isShowIcon" format="boolean" />
+        <attr name="menu_isShowHint" format="boolean" />
+    </declare-styleable>
+</resources>
