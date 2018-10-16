@@ -50,10 +50,10 @@ public class MenuView extends FrameLayout {
 
     private void init(AttributeSet attrs, int defStyle) {
         View view = View.inflate(getContext(), R.layout.view_menu, this);
-        mIconImg = (ImageView) view.findViewById(R.id.menu_icon_img);
-        mArrowImg = (ImageView) view.findViewById(R.id.menu_arrow_img);
-        mNameText = (TextView) view.findViewById(R.id.menu_name_text);
-        mHintText = (TextView) view.findViewById(R.id.menu_hint_text);
+        mIconImg = view.findViewById(R.id.menu_icon_img);
+        mArrowImg = view.findViewById(R.id.menu_arrow_img);
+        mNameText = view.findViewById(R.id.menu_name_text);
+        mHintText = view.findViewById(R.id.menu_hint_text);
 
         final TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.MenuView, defStyle, 0);
         mName = a.getString(R.styleable.MenuView_menu_name);

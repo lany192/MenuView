@@ -12,7 +12,7 @@
 ## Step 2. Add the dependency
 
     dependencies {
-        compile 'com.github.lany192:MenuView:1.0.0'
+        compile 'com.github.lany192:MenuView:1.0.1'
     }
 
 ## Step 3. Use in layout
