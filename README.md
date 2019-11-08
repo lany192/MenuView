@@ -12,12 +12,12 @@
 ## Step 2. Add the dependency
 
     dependencies {
-        compile 'com.github.lany192:MenuView:1.0.1'
+        compile 'com.github.lany192:MenuView:1.0.2'
     }
 
 ## Step 3. Use in layout
 
-    <com.github.lany192.menu.MenuView
+    <com.github.lany192.view.MenuView
         android:id="@+id/my_signin_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
