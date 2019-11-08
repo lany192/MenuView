@@ -1,15 +1,18 @@
-package com.github.lany192.menu;
+package com.github.lany192.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.ColorInt;
-import android.support.annotation.DrawableRes;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.DrawableRes;
+
+import com.github.lany192.menu.R;
 
 /**
  * 自定义菜单列表item视图
@@ -24,9 +27,9 @@ public class MenuView extends FrameLayout {
     private CharSequence mName = "";
     private CharSequence mHint = "";
     @ColorInt
-    private int mHintColor = R.color.menu_hint;
+    private int mHintColor = getResources().getColor(R.color.menu_hint);
     @ColorInt
-    private int mNameColor = R.color.menu_name;
+    private int mNameColor = getResources().getColor(R.color.menu_name);
     private boolean mIsShowArrow = true;
     private boolean mIsShowIcon = true;
     private boolean mIsShowHint = true;
@@ -73,7 +76,7 @@ public class MenuView extends FrameLayout {
     }
 
     private void reset() {
-        if (mIsShowIcon && mIconResId > 0) {
+        if (mIsShowIcon) {
             mIconImg.setImageResource(mIconResId);
             mIconImg.setVisibility(View.VISIBLE);
         } else {
@@ -93,15 +96,15 @@ public class MenuView extends FrameLayout {
         mArrowImg.setVisibility(mIsShowArrow ? View.VISIBLE : View.GONE);
     }
 
-    public MenuView setIcon(@DrawableRes int iconResId) {
-        if (mIsShowIcon && iconResId > 0) {
+    public MenuView icon(@DrawableRes int iconResId) {
+        if (mIsShowIcon) {
             this.mIconResId = iconResId;
             this.mIconImg.setImageResource(iconResId);
         }
         return this;
     }
 
-    public MenuView setName(CharSequence text) {
+    public MenuView name(CharSequence text) {
         if (!TextUtils.isEmpty(text)) {
             this.mName = text;
             this.mNameText.setText(text);
@@ -109,7 +112,7 @@ public class MenuView extends FrameLayout {
         return this;
     }
 
-    public MenuView setHint(CharSequence text) {
+    public MenuView hint(CharSequence text) {
         if (!TextUtils.isEmpty(text)) {
             this.mHint = text;
             this.mHintText.setText(text);
@@ -117,40 +120,40 @@ public class MenuView extends FrameLayout {
         return this;
     }
 
-    public MenuView setHintColor(@ColorInt int color) {
+    public MenuView hintColor(@ColorInt int color) {
         if (color > 0) {
             this.mHintText.setTextColor(color);
         }
         return this;
     }
 
-    public MenuView setIsShowArrow(boolean isShow) {
+    public MenuView isShowArrow(boolean isShow) {
         this.mIsShowArrow = isShow;
         invalidate();
         return this;
     }
 
-    public MenuView setIsShowIcon(boolean isShow) {
+    public MenuView isShowIcon(boolean isShow) {
         this.mIsShowIcon = isShow;
         invalidate();
         return this;
     }
 
-    public MenuView setHintTextSize(float size) {
+    public MenuView hintTextSize(float size) {
         if (!TextUtils.isEmpty(mHint) && size > 0) {
             this.mHintText.setTextSize(size);
         }
         return this;
     }
 
-    public MenuView setNameTextSize(float size) {
+    public MenuView nameTextSize(float size) {
         if (size > 0) {
             this.mNameText.setTextSize(size);
         }
         return this;
     }
 
-    public MenuView setNameColor(@ColorInt int color) {
+    public MenuView nameColor(@ColorInt int color) {
         if (color > 0) {
             this.mNameText.setTextColor(color);
         }

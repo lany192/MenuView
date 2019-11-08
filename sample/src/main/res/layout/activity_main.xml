@@ -12,8 +12,8 @@
         android:background="@android:color/white"
         android:orientation="vertical">
 
-        <com.github.lany192.menu.MenuView
-            android:id="@+id/my_signin_view"
+        <com.github.lany192.view.MenuView
+            android:id="@+id/menu_view_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:menu_icon="@drawable/vector_android"
@@ -26,8 +26,8 @@
             android:layout_marginRight="16dp"
             android:background="#dedede" />
 
-        <com.github.lany192.menu.MenuView
-            android:id="@+id/my_jifenbao_view"
+        <com.github.lany192.view.MenuView
+            android:id="@+id/menu_view_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:menu_icon="@drawable/vector_android"
@@ -40,8 +40,8 @@
             android:layout_marginRight="16dp"
             android:background="#dedede" />
 
-        <com.github.lany192.menu.MenuView
-            android:id="@+id/my_task_view"
+        <com.github.lany192.view.MenuView
+            android:id="@+id/menu_view_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:menu_icon="@drawable/vector_android"
@@ -54,8 +54,8 @@
             android:layout_marginRight="16dp"
             android:background="#dedede" />
 
-        <com.github.lany192.menu.MenuView
-            android:id="@+id/my_invite_view"
+        <com.github.lany192.view.MenuView
+            android:id="@+id/menu_view_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:menu_icon="@drawable/vector_android"
